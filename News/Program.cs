@@ -3,8 +3,8 @@ using News.Articles;
 using News.Telegram;
 using News.Models;
 
-TimeSpan time = new(20, 5, 0);
-var news = new List<Articles>() { /*new TsnArticles(),*/ new UnianArticles() };
+TimeSpan time = new(0, 10, 0);
+var news = new List<Articles>() { new TsnArticles(), new UnianArticles() };
 PeriodicallySendToTChatAndAddToDbArticles(time, news);
 Console.ReadLine();
 
