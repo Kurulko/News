@@ -9,7 +9,6 @@ PeriodicallySendToTChatAndAddToDbArticles(time, news);
 Console.ReadLine();
 
 
-
 static void AddArticlesToDb(IEnumerable<Article> articles)
 {
     using NewsContext db = new();
