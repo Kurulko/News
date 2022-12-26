@@ -34,9 +34,9 @@ static void AddArticlesToDb(IEnumerable<Article> articles)
 
 static async Task SendArticlesToTChatAsync(IEnumerable<Article> articles)
 {
-    const string token = Environment.GetEnvironmentVariable("MY_TELEGRAM_CHAT_NEWS");
+    string token = Environment.GetEnvironmentVariable("MY_TELEGRAM_CHAT_NEWS")!;
     TelegramNews tNews = new(token);
-    const string chatId = Environment.GetEnvironmentVariable("MY_TELEGRAM_TOKEN");
+    string chatId = Environment.GetEnvironmentVariable("MY_TELEGRAM_TOKEN")!;
     await tNews.SendTextMessagesAsync(chatId, articles);
 }
 
