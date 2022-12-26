@@ -18,7 +18,7 @@ public class NewsContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        string connectionStr = "Server=(localdb)\\mssqllocaldb; Database=News_v11; Trusted_Connection=True;";
+        string connectionStr = "Server=(localdb)\\mssqllocaldb; Database=News; Trusted_Connection=True;";
         optionsBuilder.UseSqlServer(connectionStr);
     }
 }

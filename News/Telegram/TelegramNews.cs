@@ -22,7 +22,6 @@ public class TelegramNews
     {
         try
         {
-
             string text = $"<strong>{article.Header}</strong> {article.Text} {article.Author?.Name}";
             return await botClient.SendTextMessageAsync(chatId, text, ParseMode.Html);
         }
