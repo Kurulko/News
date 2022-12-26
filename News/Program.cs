@@ -34,9 +34,9 @@ static void AddArticlesToDb(IEnumerable<Article> articles)
 
 static async Task SendArticlesToTChatAsync(IEnumerable<Article> articles)
 {
-    string token = "5844406785:AAHA8FKtl-gWsaRJXC8IUP8dkKCid5me-nY";
+    string token = "{YOUR_TOKEN}";
     TelegramNews tNews = new(token);
-    string chatId = "-823516677";
+    string chatId = "{YOUR_CHAT_ID}";
     await tNews.SendTextMessagesAsync(chatId, articles);
 }
 
