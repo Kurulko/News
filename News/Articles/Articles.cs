@@ -76,7 +76,7 @@ public abstract class Articles
         for (int i = 0; i < headers.Count(); i++)
         {
             Author author = new() { Name = authorsName[i]?.Trim()!, Link = authorsLink[i]! };
-            Article article = new() { Resource = resource, Header = headers[i].Trim(), Link = links[i], Author = author, Text = texts[i], Time = times[i] };
+            Article article = new() { Resource = resource, Header = headers[i]?.Trim()!, Link = links[i], Author = author, Text = texts[i], Time = times[i] };
             articles.Add(article);
         }
 
